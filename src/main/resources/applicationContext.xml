@@ -20,7 +20,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="ua.springcourse.MusicPlayer">
+          class="ua.springcourse.MusicPlayer"
+          scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="classicalMusic"/>
@@ -28,6 +29,7 @@
                 <ref bean="rockMusic"/>
             </list>
         </property>
+        <property name="volume" value="50"/>
     </bean>
 
 </beans>
